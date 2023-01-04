@@ -9,8 +9,9 @@ namespace CRUDTests
     {
       //Arrange
       MyMath mm = new();
-      int input1 = 10, input2 = 5;
-      int expected = 15;
+      const int input1 = 10;
+      const int input2 = 5;
+      const int expected = 15;
 
       //Act
       int actual = mm.Add(input1, input2);
