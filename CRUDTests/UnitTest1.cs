@@ -8,7 +8,7 @@ namespace CRUDTests
     public void Test1()
     {
       //Arrange
-      MyMath mm = new MyMath();
+      MyMath mm = new();
       int input1 = 10, input2 = 5;
       int expected = 15;
 

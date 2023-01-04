@@ -39,7 +39,7 @@ namespace CRUDTests
     public void AddCountry_CountryNameIsNull()
     {
       //Arrange
-      CountryAddRequest? request = new CountryAddRequest() { CountryName = null };
+      CountryAddRequest? request = new() { CountryName = null };
 
       //Assert
       Assert.Throws<ArgumentException>(() =>
@@ -55,8 +55,8 @@ namespace CRUDTests
     public void AddCountry_DuplicateCountryName()
     {
       //Arrange
-      CountryAddRequest? request1 = new CountryAddRequest() { CountryName = "USA" };
-      CountryAddRequest? request2 = new CountryAddRequest() { CountryName = "USA" };
+      CountryAddRequest? request1 = new() { CountryName = "USA" };
+      CountryAddRequest? request2 = new() { CountryName = "USA" };
 
       //Assert
       Assert.Throws<ArgumentException>(() =>
@@ -73,7 +73,7 @@ namespace CRUDTests
     public void AddCountry_ProperCountryDetails()
     {
       //Arrange
-      CountryAddRequest? request = new CountryAddRequest() { CountryName = "Japan" };
+      CountryAddRequest? request = new() { CountryName = "Japan" };
 
       //Act
       CountryResponse response = _countriesService.AddCountry(request);
@@ -104,13 +104,13 @@ namespace CRUDTests
     public void GetAllCountries_AddFewCountries()
     {
       //Arrange
-      List<CountryAddRequest> country_request_list = new List<CountryAddRequest>() { 
+      List<CountryAddRequest> country_request_list = new() { 
         new CountryAddRequest() { CountryName = "USA" },
         new CountryAddRequest() { CountryName = "UK" }
       };
 
       //Act
-      List<CountryResponse> countries_list_from_add_country = new List<CountryResponse>();
+      List<CountryResponse> countries_list_from_add_country = new();
 
       foreach (CountryAddRequest country_request in country_request_list)
       {
@@ -151,7 +151,7 @@ namespace CRUDTests
     public void GetCountryByCountryID_ValidCountryID()
     {
       //Arrange
-      CountryAddRequest? country_add_request = new CountryAddRequest() { CountryName = "China" };
+      CountryAddRequest? country_add_request = new() { CountryName = "China" };
       CountryResponse country_response_from_add = _countriesService.AddCountry(country_add_request);
 
       //Act
