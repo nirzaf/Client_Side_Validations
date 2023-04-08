@@ -40,7 +40,7 @@ namespace ServiceContracts.DTO
     //Converts from Country object to CountryResponse object
     public static CountryResponse ToCountryResponse(this Country country)
     {
-      return new CountryResponse() {  CountryID = country.CountryID, CountryName = country.CountryName };
+      return new CountryResponse {  CountryID = country.CountryID, CountryName = country.CountryName };
     }
   }
 }

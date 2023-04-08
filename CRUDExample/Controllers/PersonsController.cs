@@ -26,7 +26,7 @@ namespace CRUDExample.Controllers
     public IActionResult Index(string searchBy, string? searchString, string sortBy = nameof(PersonResponse.PersonName), SortOrderOptions sortOrder = SortOrderOptions.ASC)
     {
       //Search
-      ViewBag.SearchFields = new Dictionary<string, string>()
+      ViewBag.SearchFields = new Dictionary<string, string>
       {
         { nameof(PersonResponse.PersonName), "Person Name" },
         { nameof(PersonResponse.Email), "Email" },
@@ -56,7 +56,7 @@ namespace CRUDExample.Controllers
     {
       List<CountryResponse> countries = _countriesService.GetAllCountries();
       ViewBag.Countries = countries.Select(temp => 
-        new SelectListItem() {  Text = temp.CountryName, Value = temp.CountryID.ToString() }
+        new SelectListItem {  Text = temp.CountryName, Value = temp.CountryID.ToString() }
       );
 
       //new SelectListItem() { Text="Harsha", Value="1" }
@@ -73,7 +73,7 @@ namespace CRUDExample.Controllers
       {
         List<CountryResponse> countries = _countriesService.GetAllCountries();
         ViewBag.Countries = countries.Select(temp =>
-        new SelectListItem() { Text = temp.CountryName, Value = temp.CountryID.ToString() });
+        new SelectListItem { Text = temp.CountryName, Value = temp.CountryID.ToString() });
 
         ViewBag.Errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
         return View();

@@ -15,7 +15,8 @@ namespace Services
       _countries = new List<Country>();
       if (initialize)
       {
-        _countries.AddRange(new List<Country>() {
+        _countries.AddRange(new List<Country>
+        {
         new() {  CountryID = Guid.Parse("000C76EB-62E9-4465-96D1-2C41FDB64C3B"), CountryName = "USA" },
 
         new() { CountryID = Guid.Parse("32DA506B-3EBA-48A4-BD86-5F93A2E19E3F"), CountryName = "Canada" },
