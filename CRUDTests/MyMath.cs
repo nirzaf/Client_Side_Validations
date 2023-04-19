@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUDTests
+namespace CRUDTests;
+
+internal class MyMath
 {
-  internal class MyMath
+  public int Add(int a, int b)
   {
-    public int Add(int a, int b)
-    {
-      int c = a + b;
-      return c;
-    }
+    int c = a + b;
+    return c;
   }
 }
