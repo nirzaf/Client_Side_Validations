@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Entities;
+﻿namespace Entities;
 
 /// <summary>
 /// Person domain model class

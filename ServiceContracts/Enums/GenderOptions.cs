@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ServiceContracts.Enums;
+﻿namespace ServiceContracts.Enums;
 
 public enum GenderOptions
 {

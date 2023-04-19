@@ -1,5 +1,4 @@
-﻿using System;
-using Entities;
+﻿using Entities;
 
 namespace ServiceContracts.DTO;
 

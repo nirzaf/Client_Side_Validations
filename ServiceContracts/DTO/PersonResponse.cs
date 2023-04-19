@@ -1,5 +1,4 @@
-﻿using System;
-using Entities;
+﻿using Entities;
 using ServiceContracts.Enums;
 
 namespace ServiceContracts.DTO;
